@@ -48,18 +48,18 @@ export function Navigation({ onLoginClick }: NavigationProps) {
   return (
     <>
       <nav
-        className={`fixed w-full z-50 py-5 top-0 transition-all duration-300 ${
+        className={`fixed w-full z-50 py-3 md:py-5 top-0 transition-all duration-300 ${
           isScrolled
             ? 'bg-background/80 backdrop-blur-[40px] border-b border-white/6 shadow-[0_4px_40px_rgba(0,0,0,0.4)]'
             : 'bg-background/50 backdrop-blur-[20px] border-b border-transparent'
         }`}
       >
-        <div className="max-w-[1400px] mx-auto px-8 flex justify-between items-center">
-          <div className="flex items-center space-x-4">
-            <div className="w-12 h-12 bg-gradient-to-r from-primary to-[oklch(0.60_0.22_250)] rounded-xl flex items-center justify-center shadow-lg quantum-pulse">
-              <Atom size={24} weight="bold" className="text-white" />
+        <div className="max-w-[1400px] mx-auto px-4 md:px-8 flex justify-between items-center">
+          <div className="flex items-center space-x-2 md:space-x-4">
+            <div className="w-10 h-10 md:w-12 md:h-12 bg-gradient-to-r from-primary to-[oklch(0.60_0.22_250)] rounded-xl flex items-center justify-center shadow-lg quantum-pulse">
+              <Atom size={20} weight="bold" className="text-white md:w-6 md:h-6" />
             </div>
-            <span className="text-3xl font-extrabold text-gradient tracking-tight">
+            <span className="text-xl md:text-3xl font-extrabold text-gradient tracking-tight">
               AETHER
             </span>
           </div>
@@ -99,15 +99,15 @@ export function Navigation({ onLoginClick }: NavigationProps) {
             </button>
           </div>
 
-          <div className="flex items-center space-x-4">
-            <Button onClick={onLoginClick} className="btn-gradient text-base px-8">
+          <div className="flex items-center space-x-2 md:space-x-4">
+            <Button onClick={onLoginClick} className="btn-gradient text-sm md:text-base px-4 md:px-8 h-9 md:h-10">
               Login
             </Button>
             <button
               onClick={() => setIsMobileMenuOpen(true)}
-              className="md:hidden text-white text-2xl"
+              className="md:hidden text-white"
             >
-              <List size={32} />
+              <List size={28} />
             </button>
           </div>
         </div>
@@ -117,32 +117,32 @@ export function Navigation({ onLoginClick }: NavigationProps) {
         <div className="fixed inset-0 z-[60] flex items-center justify-center bg-background/90 backdrop-blur-[40px] opacity-100 transition-opacity duration-300">
           <button
             onClick={() => setIsMobileMenuOpen(false)}
-            className="absolute top-8 right-8 text-white text-4xl"
+            className="absolute top-6 right-6 md:top-8 md:right-8 text-white"
           >
-            <X size={48} />
+            <X size={40} className="md:w-12 md:h-12" />
           </button>
-          <div className="flex flex-col space-y-8">
+          <div className="flex flex-col space-y-6 md:space-y-8 px-6">
             <button
               onClick={() => scrollToSection('features')}
-              className="text-3xl font-bold text-gray-300 text-center py-4 hover:text-white hover:scale-105 transition-all"
+              className="text-2xl md:text-3xl font-bold text-gray-300 text-center py-3 md:py-4 hover:text-white hover:scale-105 transition-all"
             >
               Features
             </button>
             <button
               onClick={() => scrollToSection('ai-demo')}
-              className="text-3xl font-bold text-gray-300 text-center py-4 hover:text-white hover:scale-105 transition-all"
+              className="text-2xl md:text-3xl font-bold text-gray-300 text-center py-3 md:py-4 hover:text-white hover:scale-105 transition-all"
             >
               AI Demo
             </button>
             <button
               onClick={() => scrollToSection('technology')}
-              className="text-3xl font-bold text-gray-300 text-center py-4 hover:text-white hover:scale-105 transition-all"
+              className="text-2xl md:text-3xl font-bold text-gray-300 text-center py-3 md:py-4 hover:text-white hover:scale-105 transition-all"
             >
               Technology
             </button>
             <button
               onClick={() => scrollToSection('beta')}
-              className="text-3xl font-bold text-gray-300 text-center py-4 hover:text-white hover:scale-105 transition-all"
+              className="text-2xl md:text-3xl font-bold text-gray-300 text-center py-3 md:py-4 hover:text-white hover:scale-105 transition-all"
             >
               Join Beta
             </button>

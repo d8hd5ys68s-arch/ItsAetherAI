@@ -88,26 +88,26 @@ export function AIDemoSection() {
   }
 
   return (
-    <section id="ai-demo" className="py-28 relative z-10">
-      <div className="max-w-[1400px] mx-auto px-8">
-        <div className="grid lg:grid-cols-2 gap-16 items-center">
+    <section id="ai-demo" className="py-16 md:py-28 relative z-10">
+      <div className="max-w-[1400px] mx-auto px-4 md:px-8">
+        <div className="grid lg:grid-cols-2 gap-8 md:gap-16 items-center">
           <div className="opacity-0 animate-[fadeInUp_0.8s_ease-out_0.1s_forwards]">
-            <h2 className="text-5xl md:text-6xl font-extrabold mb-6 text-gradient">
+            <h2 className="text-3xl md:text-5xl lg:text-6xl font-extrabold mb-4 md:mb-6 text-gradient">
               Engage with Aether AI
             </h2>
-            <p className="text-gray-300 mb-8 text-xl leading-relaxed max-w-lg">
+            <p className="text-gray-300 mb-6 md:mb-8 text-base md:text-xl leading-relaxed max-w-lg">
               Interact directly with Aether's advanced cognitive model. Ask profound questions, request intricate data, or explore creative frontiers.
             </p>
 
-            <div className="space-y-6 mt-10 text-lg">
+            <div className="space-y-4 md:space-y-6 mt-6 md:mt-10 text-base md:text-lg">
               {[
                 'Hyper-responsive feedback, even on the most complex queries.',
                 'Profound contextual understanding across vast data oceans.',
                 'Continuous self-optimization and emergent capabilities.'
               ].map((text, i) => (
-                <div key={i} className="flex items-start space-x-4">
-                  <div className="w-11 h-11 bg-green-500/20 rounded-full flex items-center justify-center flex-shrink-0 mt-1">
-                    <Check size={16} weight="bold" className="text-green-400" />
+                <div key={i} className="flex items-start space-x-3 md:space-x-4">
+                  <div className="w-9 h-9 md:w-11 md:h-11 bg-green-500/20 rounded-full flex items-center justify-center flex-shrink-0 mt-1">
+                    <Check size={14} weight="bold" className="text-green-400 md:w-4 md:h-4" />
                   </div>
                   <p className="text-gray-300">{text}</p>
                 </div>
@@ -115,50 +115,50 @@ export function AIDemoSection() {
             </div>
           </div>
 
-          <div className="glass-card p-8 opacity-0 animate-[fadeInUp_0.8s_ease-out_0.2s_forwards]">
-            <div className="h-[550px] flex flex-col rounded-xl overflow-hidden border border-white/10 shadow-[0_4px_30px_rgba(0,0,0,0.3)] bg-[oklch(0.08_0_0/0.6)] backdrop-blur-[25px] relative">
+          <div className="glass-card p-4 md:p-8 opacity-0 animate-[fadeInUp_0.8s_ease-out_0.2s_forwards]">
+            <div className="h-[450px] md:h-[550px] flex flex-col rounded-xl overflow-hidden border border-white/10 shadow-[0_4px_30px_rgba(0,0,0,0.3)] bg-[oklch(0.08_0_0/0.6)] backdrop-blur-[25px] relative">
               <button
                 onClick={handleReset}
-                className="absolute top-4 right-4 z-10 text-muted-foreground hover:text-accent hover:scale-110 hover:rotate-45 transition-all"
+                className="absolute top-3 right-3 md:top-4 md:right-4 z-10 text-muted-foreground hover:text-accent hover:scale-110 hover:rotate-45 transition-all"
                 title="Reset Conversation"
               >
-                <ArrowsClockwise size={20} weight="bold" />
+                <ArrowsClockwise size={18} weight="bold" className="md:w-5 md:h-5" />
               </button>
 
-              <ScrollArea ref={scrollRef} className="flex-1 p-5">
-                <div className="space-y-5">
+              <ScrollArea ref={scrollRef} className="flex-1 p-3 md:p-5">
+                <div className="space-y-4 md:space-y-5">
                   {messages.map((message, index) => (
                     <ChatMessage key={message.id} message={message} isLast={index === messages.length - 1} />
                   ))}
                 </div>
               </ScrollArea>
 
-              <div className="p-5 border-t border-gray-700/50">
-                <div className="flex space-x-4 mb-3">
+              <div className="p-3 md:p-5 border-t border-gray-700/50">
+                <div className="flex space-x-2 md:space-x-4 mb-2 md:mb-3">
                   <Input
                     value={input}
                     onChange={(e) => setInput(e.target.value)}
                     onKeyPress={handleKeyPress}
                     placeholder="Engage Aether intelligence..."
                     disabled={isLoading}
-                    className="flex-1 rounded-full bg-white/8 border-white/15 focus:border-accent focus:ring-accent text-base h-12"
+                    className="flex-1 rounded-full bg-white/8 border-white/15 focus:border-accent focus:ring-accent text-sm md:text-base h-10 md:h-12"
                   />
                   <Button
                     onClick={() => handleSend()}
                     disabled={!input.trim() || isLoading}
-                    className="btn-gradient w-14 h-14 rounded-full p-0 flex-shrink-0"
+                    className="btn-gradient w-10 h-10 md:w-14 md:h-14 rounded-full p-0 flex-shrink-0"
                   >
-                    <PaperPlaneRight size={24} weight="fill" />
+                    <PaperPlaneRight size={18} weight="fill" className="md:w-6 md:h-6" />
                   </Button>
                 </div>
 
-                <div className="flex flex-wrap gap-3">
+                <div className="flex flex-wrap gap-2 md:gap-3">
                   {suggestionChips.map((chip, i) => (
                     <button
                       key={i}
                       onClick={() => handleSend(chip)}
                       disabled={isLoading}
-                      className="text-sm px-5 py-2 rounded-full bg-white/8 border border-white/15 text-muted-foreground hover:bg-accent/20 hover:border-accent hover:text-accent transition-all hover:translate-y-[-2px] disabled:opacity-50"
+                      className="text-xs md:text-sm px-3 md:px-5 py-1.5 md:py-2 rounded-full bg-white/8 border border-white/15 text-muted-foreground hover:bg-accent/20 hover:border-accent hover:text-accent transition-all hover:translate-y-[-2px] disabled:opacity-50"
                     >
                       {chip}
                     </button>
@@ -194,7 +194,7 @@ function ChatMessage({ message, isLast }: ChatMessageProps) {
       style={{ animationDelay: isLast ? '0.1s' : '0s' }}
     >
       <div
-        className={`relative max-w-[80%] md:max-w-[75%] px-5 py-3 rounded-2xl text-white shadow-md ${
+        className={`relative max-w-[85%] md:max-w-[80%] lg:max-w-[75%] px-4 md:px-5 py-2.5 md:py-3 rounded-2xl text-white shadow-md text-sm md:text-base ${
           message.role === 'user'
             ? 'bg-gradient-to-r from-primary to-[oklch(0.60_0.22_250)] rounded-br-lg'
             : message.role === 'loading'
@@ -210,7 +210,7 @@ function ChatMessage({ message, isLast }: ChatMessageProps) {
             className="absolute top-2 right-2 bg-black/30 hover:bg-accent border-none rounded px-2 py-1 text-xs opacity-0 group-hover:opacity-100 transition-opacity"
             title="Copy text"
           >
-            {copied ? <Check size={14} /> : <Copy size={14} />}
+            {copied ? <Check size={12} className="md:w-3.5 md:h-3.5" /> : <Copy size={12} className="md:w-3.5 md:h-3.5" />}
           </button>
         )}
       </div>

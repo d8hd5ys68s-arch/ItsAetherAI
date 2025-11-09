@@ -23,11 +23,11 @@ export function ScrollToTop() {
   return (
     <button
       onClick={scrollToTop}
-      className={`fixed bottom-8 right-8 z-50 w-14 h-14 rounded-full flex items-center justify-center text-white text-xl btn-gradient transition-all duration-400 ${
+      className={`fixed bottom-6 right-6 md:bottom-8 md:right-8 z-50 w-12 h-12 md:w-14 md:h-14 rounded-full flex items-center justify-center text-white btn-gradient transition-all duration-400 ${
         isVisible ? 'opacity-100 visible' : 'opacity-0 invisible'
       }`}
     >
-      <ArrowUp size={24} weight="bold" />
+      <ArrowUp size={20} weight="bold" className="md:w-6 md:h-6" />
     </button>
   )
 }
