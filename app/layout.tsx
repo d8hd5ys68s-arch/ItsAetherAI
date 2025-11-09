@@ -6,6 +6,7 @@ import { inter, spaceMono } from '@/lib/fonts-config';
 import { SpeedInsights } from '@vercel/speed-insights/next';
 import './globals.css';
 import './theme.css';
+import './animations.css';
 
 export const metadata: Metadata = {
   title: 'Aether AI - Enterprise-Grade AI Platform',
