@@ -1,0 +1,180 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 300" role="img" aria-label="Aether AI Banner">
+  <defs>
+    <!-- Gradient Backgrounds -->
+    <linearGradient id="bgGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#1e3a8a;stop-opacity:1" />
+      <stop offset="50%" style="stop-color:#3730a3;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#6366f1;stop-opacity:1" />
+    </linearGradient>
+
+    <!-- Glow Effect -->
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="3" result="coloredBlur"/>
+      <feMerge>
+        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+
+    <!-- Neural Network Pattern -->
+    <pattern id="neuralPattern" x="0" y="0" width="100" height="100" patternUnits="userSpaceOnUse">
+      <circle cx="10" cy="10" r="1.5" fill="#ffffff" opacity="0.15"/>
+      <circle cx="50" cy="30" r="1.5" fill="#ffffff" opacity="0.15"/>
+      <circle cx="80" cy="20" r="1.5" fill="#ffffff" opacity="0.15"/>
+      <circle cx="30" cy="60" r="1.5" fill="#ffffff" opacity="0.15"/>
+      <circle cx="70" cy="80" r="1.5" fill="#ffffff" opacity="0.15"/>
+      <line x1="10" y1="10" x2="50" y2="30" stroke="#ffffff" stroke-width="0.5" opacity="0.1"/>
+      <line x1="50" y1="30" x2="80" y2="20" stroke="#ffffff" stroke-width="0.5" opacity="0.1"/>
+      <line x1="10" y1="10" x2="30" y2="60" stroke="#ffffff" stroke-width="0.5" opacity="0.1"/>
+      <line x1="30" y1="60" x2="70" y2="80" stroke="#ffffff" stroke-width="0.5" opacity="0.1"/>
+      <line x1="50" y1="30" x2="70" y2="80" stroke="#ffffff" stroke-width="0.5" opacity="0.1"/>
+    </pattern>
+
+    <!-- Blockchain Pattern -->
+    <pattern id="blockchainPattern" x="0" y="0" width="60" height="60" patternUnits="userSpaceOnUse">
+      <rect x="10" y="10" width="15" height="15" fill="none" stroke="#00D4AA" stroke-width="1" opacity="0.2"/>
+      <rect x="35" y="35" width="15" height="15" fill="none" stroke="#00D4AA" stroke-width="1" opacity="0.2"/>
+      <line x1="25" y1="17.5" x2="35" y2="42.5" stroke="#00D4AA" stroke-width="1" opacity="0.2"/>
+    </pattern>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1200" height="300" fill="url(#bgGradient)"/>
+
+  <!-- Neural Network Overlay -->
+  <rect width="600" height="300" fill="url(#neuralPattern)" opacity="0.6"/>
+
+  <!-- Blockchain Overlay (right side) -->
+  <rect x="600" width="600" height="300" fill="url(#blockchainPattern)" opacity="0.6"/>
+
+  <!-- Left Section: AI Brain/Neural Network -->
+  <g id="aiSection">
+    <!-- Central Node -->
+    <circle cx="180" cy="150" r="35" fill="none" stroke="#4A90E2" stroke-width="3" opacity="0.8" filter="url(#glow)"/>
+    <circle cx="180" cy="150" r="30" fill="#4A90E2" opacity="0.3"/>
+
+    <!-- Inner Nodes -->
+    <circle cx="180" cy="150" r="8" fill="#ffffff" filter="url(#glow)"/>
+
+    <!-- Surrounding Nodes (Neural Network) -->
+    <circle cx="120" cy="100" r="6" fill="#4A90E2" opacity="0.8"/>
+    <circle cx="240" cy="100" r="6" fill="#4A90E2" opacity="0.8"/>
+    <circle cx="120" cy="200" r="6" fill="#4A90E2" opacity="0.8"/>
+    <circle cx="240" cy="200" r="6" fill="#4A90E2" opacity="0.8"/>
+    <circle cx="140" cy="150" r="5" fill="#60A5FA" opacity="0.6"/>
+    <circle cx="220" cy="150" r="5" fill="#60A5FA" opacity="0.6"/>
+    <circle cx="180" cy="110" r="5" fill="#60A5FA" opacity="0.6"/>
+    <circle cx="180" cy="190" r="5" fill="#60A5FA" opacity="0.6"/>
+
+    <!-- Neural Connections -->
+    <line x1="180" y1="150" x2="120" y2="100" stroke="#4A90E2" stroke-width="2" opacity="0.4"/>
+    <line x1="180" y1="150" x2="240" y2="100" stroke="#4A90E2" stroke-width="2" opacity="0.4"/>
+    <line x1="180" y1="150" x2="120" y2="200" stroke="#4A90E2" stroke-width="2" opacity="0.4"/>
+    <line x1="180" y1="150" x2="240" y2="200" stroke="#4A90E2" stroke-width="2" opacity="0.4"/>
+    <line x1="180" y1="150" x2="140" y2="150" stroke="#60A5FA" stroke-width="1.5" opacity="0.4"/>
+    <line x1="180" y1="150" x2="220" y2="150" stroke="#60A5FA" stroke-width="1.5" opacity="0.4"/>
+    <line x1="180" y1="150" x2="180" y2="110" stroke="#60A5FA" stroke-width="1.5" opacity="0.4"/>
+    <line x1="180" y1="150" x2="180" y2="190" stroke="#60A5FA" stroke-width="1.5" opacity="0.4"/>
+
+    <!-- DocsGPT Label -->
+    <text x="180" y="260" font-family="Arial, sans-serif" font-size="14" font-weight="600" fill="#ffffff" text-anchor="middle" opacity="0.9">DocsGPT</text>
+  </g>
+
+  <!-- Center: Main Title -->
+  <g id="titleSection">
+    <!-- Aether AI -->
+    <text x="600" y="120" font-family="'Segoe UI', Arial, sans-serif" font-size="72" font-weight="700" fill="#ffffff" text-anchor="middle" letter-spacing="2">
+      AETHER AI
+    </text>
+
+    <!-- Connecting Line -->
+    <line x1="380" y1="150" x2="520" y2="150" stroke="#00D4AA" stroke-width="2" opacity="0.6" stroke-dasharray="5,5">
+      <animate attributeName="stroke-dashoffset" from="10" to="0" dur="1s" repeatCount="indefinite"/>
+    </line>
+    <line x1="680" y1="150" x2="820" y2="150" stroke="#00D4AA" stroke-width="2" opacity="0.6" stroke-dasharray="5,5">
+      <animate attributeName="stroke-dashoffset" from="10" to="0" dur="1s" repeatCount="indefinite"/>
+    </line>
+
+    <!-- Subtitle -->
+    <text x="600" y="160" font-family="'Segoe UI', Arial, sans-serif" font-size="20" font-weight="400" fill="#ffffff" text-anchor="middle" opacity="0.85">
+      Enterprise Intelligence on Hedera Hashgraph
+    </text>
+
+    <!-- Feature Pills -->
+    <g id="features">
+      <!-- Code Generation -->
+      <rect x="340" y="180" width="130" height="28" rx="14" fill="#4A90E2" opacity="0.4"/>
+      <text x="405" y="200" font-family="Arial, sans-serif" font-size="13" font-weight="500" fill="#ffffff" text-anchor="middle">Code Generation</text>
+
+      <!-- Analytics -->
+      <rect x="485" y="180" width="100" height="28" rx="14" fill="#8B5CF6" opacity="0.4"/>
+      <text x="535" y="200" font-family="Arial, sans-serif" font-size="13" font-weight="500" fill="#ffffff" text-anchor="middle">Analytics</text>
+
+      <!-- Blockchain -->
+      <rect x="600" y="180" width="100" height="28" rx="14" fill="#00D4AA" opacity="0.4"/>
+      <text x="650" y="200" font-family="Arial, sans-serif" font-size="13" font-weight="500" fill="#ffffff" text-anchor="middle">Blockchain</text>
+
+      <!-- Carbon Negative -->
+      <rect x="715" y="180" width="145" height="28" rx="14" fill="#10B981" opacity="0.4"/>
+      <text x="787.5" y="200" font-family="Arial, sans-serif" font-size="13" font-weight="500" fill="#ffffff" text-anchor="middle">Carbon Negative</text>
+    </g>
+  </g>
+
+  <!-- Right Section: Hedera Blockchain -->
+  <g id="blockchainSection">
+    <!-- Hedera-style Hashgraph -->
+    <g transform="translate(1020, 150)">
+      <!-- Central Hexagon -->
+      <polygon points="0,-30 26,-15 26,15 0,30 -26,15 -26,-15" fill="none" stroke="#00D4AA" stroke-width="3" opacity="0.8" filter="url(#glow)"/>
+      <polygon points="0,-25 22,-12.5 22,12.5 0,25 -22,12.5 -22,-12.5" fill="#00D4AA" opacity="0.2"/>
+
+      <!-- Inner Elements -->
+      <circle cx="0" cy="0" r="8" fill="#ffffff" filter="url(#glow)"/>
+
+      <!-- Connecting Hexagons -->
+      <polygon points="0,-60 13,-52.5 13,-37.5 0,-30 -13,-37.5 -13,-52.5" fill="#00D4AA" opacity="0.5"/>
+      <polygon points="45,-30 58,-22.5 58,-7.5 45,0 32,-7.5 32,-22.5" fill="#00D4AA" opacity="0.5"/>
+      <polygon points="45,30 58,37.5 58,52.5 45,60 32,52.5 32,37.5" fill="#00D4AA" opacity="0.5"/>
+      <polygon points="0,60 13,67.5 13,82.5 0,90 -13,82.5 -13,67.5" fill="#00D4AA" opacity="0.5"/>
+      <polygon points="-45,30 -32,37.5 -32,52.5 -45,60 -58,52.5 -58,37.5" fill="#00D4AA" opacity="0.5"/>
+      <polygon points="-45,-30 -32,-22.5 -32,-7.5 -45,0 -58,-7.5 -58,-22.5" fill="#00D4AA" opacity="0.5"/>
+
+      <!-- Connecting Lines -->
+      <line x1="0" y1="-30" x2="0" y2="-60" stroke="#00D4AA" stroke-width="1.5" opacity="0.6"/>
+      <line x1="26" y1="-15" x2="45" y2="-30" stroke="#00D4AA" stroke-width="1.5" opacity="0.6"/>
+      <line x1="26" y1="15" x2="45" y2="30" stroke="#00D4AA" stroke-width="1.5" opacity="0.6"/>
+      <line x1="0" y1="30" x2="0" y2="60" stroke="#00D4AA" stroke-width="1.5" opacity="0.6"/>
+      <line x1="-26" y1="15" x2="-45" y2="30" stroke="#00D4AA" stroke-width="1.5" opacity="0.6"/>
+      <line x1="-26" y1="-15" x2="-45" y2="-30" stroke="#00D4AA" stroke-width="1.5" opacity="0.6"/>
+    </g>
+
+    <!-- Hedera Label -->
+    <text x="1020" y="260" font-family="Arial, sans-serif" font-size="14" font-weight="600" fill="#ffffff" text-anchor="middle" opacity="0.9">Hedera HTS</text>
+  </g>
+
+  <!-- Carbon Negative Badge -->
+  <g id="carbonBadge" transform="translate(1100, 40)">
+    <circle cx="0" cy="0" r="25" fill="#10B981" opacity="0.3"/>
+    <circle cx="0" cy="0" r="20" fill="#10B981" opacity="0.5"/>
+    <!-- Leaf Icon -->
+    <path d="M -8,-8 Q -8,-15 0,-12 Q 8,-15 8,-8 Q 8,0 0,8 Q -8,0 -8,-8 Z" fill="#ffffff" opacity="0.9"/>
+    <path d="M 0,-12 L 0,8" stroke="#10B981" stroke-width="1.5" opacity="0.7"/>
+    <text x="0" y="42" font-family="Arial, sans-serif" font-size="11" font-weight="600" fill="#10B981" text-anchor="middle">Carbon</text>
+    <text x="0" y="54" font-family="Arial, sans-serif" font-size="11" font-weight="600" fill="#10B981" text-anchor="middle">Negative</text>
+  </g>
+
+  <!-- Speed Badge -->
+  <g id="speedBadge" transform="translate(70, 40)">
+    <circle cx="0" cy="0" r="25" fill="#F59E0B" opacity="0.3"/>
+    <circle cx="0" cy="0" r="20" fill="#F59E0B" opacity="0.5"/>
+    <!-- Lightning Icon -->
+    <path d="M 2,-10 L -8,2 L 0,2 L -2,10 L 8,-2 L 0,-2 Z" fill="#ffffff" opacity="0.9"/>
+    <text x="0" y="42" font-family="Arial, sans-serif" font-size="11" font-weight="600" fill="#F59E0B" text-anchor="middle">10,000</text>
+    <text x="0" y="54" font-family="Arial, sans-serif" font-size="11" font-weight="600" fill="#F59E0B" text-anchor="middle">TPS</text>
+  </g>
+
+  <!-- Bottom Tag Line -->
+  <text x="600" y="285" font-family="'Segoe UI', Arial, sans-serif" font-size="16" font-weight="300" fill="#ffffff" text-anchor="middle" opacity="0.7" letter-spacing="1">
+    Faster • Cheaper • Efficient • Auditable
+  </text>
+</svg>
