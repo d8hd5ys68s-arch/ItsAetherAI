@@ -3,6 +3,7 @@ import { Toaster } from 'sonner';
 import { ErrorBoundary } from 'react-error-boundary';
 import { ErrorFallback } from '@/components/ErrorFallback';
 import { inter, spaceMono } from '@/lib/fonts-config';
+import { SpeedInsights } from '@vercel/speed-insights/next';
 import './globals.css';
 import './theme.css';
 
@@ -45,6 +46,7 @@ export default function RootLayout({
               },
             }}
           />
+          <SpeedInsights />
         </ErrorBoundary>
       </body>
     </html>
