@@ -16,6 +16,7 @@ const createIconImportProxy = (await import("@github/spark/vitePhosphorIconProxy
 // https://vite.dev/config/
 export default defineConfig({
   base: './',
+  publicDir: 'public',
   plugins: [
     react(),
     tailwindcss(),
