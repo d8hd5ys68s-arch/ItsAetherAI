@@ -798,6 +798,65 @@ Enterprise deployment supports:
 
 ## 🚢 Deployment
 
+### GitHub Pages Deployment
+
+The application is automatically deployed to GitHub Pages via GitHub Actions when changes are pushed to the `main` branch.
+
+#### Configuration
+
+The project is configured with:
+- **Vite base path**: `'./'` for proper asset paths on custom domain
+- **Build output**: `dist/` folder (containing compiled JS/CSS, not TSX files)
+- **Custom domain**: `www.itsaether.ai` (via CNAME file)
+- **GitHub Actions workflow**: Automatically builds and deploys on push to main
+
+#### Manual Build & Verification
+
+```bash
+# 1. Build the application
+npm run build
+
+# 2. Verify build output (automated check)
+npm run verify-build
+
+# 3. Verify build output manually
+ls -la dist/
+# Should show: index.html, assets/ folder with .js and .css files
+
+# 4. Verify asset paths in built index.html
+cat dist/index.html
+# Should reference: ./assets/index-*.js and ./assets/index-*.css
+# Should NOT reference: /src/main.tsx or .tsx files
+```
+
+The `verify-build` script automatically checks that:
+- ✅ Build output exists in `dist/` folder
+- ✅ No `.tsx` file references in built HTML
+- ✅ No `/src/` path references
+- ✅ Asset paths use `./assets/` (correct for GitHub Pages)
+- ✅ JavaScript and CSS files are present
+
+#### Troubleshooting
+
+If you see MIME type errors or 404s on GitHub Pages:
+
+1. **Check asset URLs**: Open Developer Tools → Network tab
+   - ✅ Correct: Requests to `/assets/index-*.js` and `.css` files
+   - ❌ Wrong: Requests to `/src/main.tsx` or other `.tsx` files
+
+2. **Clear cache**: After fixing build/publish issues
+   - Hard refresh: `Ctrl+Shift+R` (Windows/Linux) or `Cmd+Shift+R` (Mac)
+   - Or open in incognito/private browsing mode
+
+3. **Verify GitHub Pages settings**:
+   - Source: GitHub Actions
+   - Custom domain: `www.itsaether.ai`
+   - Enforce HTTPS: Enabled ✅
+
+4. **Check GitHub Actions workflow**:
+   - Verify the workflow completed successfully
+   - Ensure it deployed the `dist/` folder (not `src/`)
+
 ### Production Deployment to Firebase
 
 ```bash
