@@ -14,7 +14,7 @@
         "deploy:github": "npm run build:static && touch out/.nojekyll && echo 'www.itsaether.ai' > out/CNAME"
     },
     "dependencies": {
-        "@auth/core": "^0.40.0",
+        "@auth/core": "^0.41.1",
         "@google/generative-ai": "^0.21.0",
         "@hashgraph/sdk": "^2.72.0",
         "@heroicons/react": "^2.2.0",
